@@ -7,7 +7,6 @@ class CreateSoaps < ActiveRecord::Migration[6.0]
       t.string :colorant
       t.string :butter
       t.string :title
-      t.integer :base_id
 
       t.timestamps
     end

@@ -1,15 +1,15 @@
 class SoapsController < ApplicationController
     def index
-        
-        render :json Soap.all
+        @soaps = Soap.all
+        render json: @soaps
     end
 
     def create
         @soap = Soap.new(soap_params)
         if @soap.save
-            render :json @soap, status: :created
+            render json: @soap, status: :created
         else
-            render :json @soap.errors.full_messages, status: :unprocessable_entity
+            render json: @soap.errors.full_messages, status: :unprocessable_entity
         end
     end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_12_192918) do
+ActiveRecord::Schema.define(version: 2020_09_12_212603) do
 
   create_table "bases", force: :cascade do |t|
     t.string "name"
@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(version: 2020_09_12_192918) do
     t.string "colorant"
     t.string "butter"
     t.string "title"
-    t.integer "base_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "base_id", null: false
+    t.index ["base_id"], name: "index_soaps_on_base_id"
   end
 
+  add_foreign_key "soaps", "bases", column: "base_id"
 end
