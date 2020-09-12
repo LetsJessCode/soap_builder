@@ -13,9 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_09_12_192918) do
 
   create_table "bases", force: :cascade do |t|
-    t.string "type"
+    t.string "name"
     t.text "description"
-    t.integer "soap_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -27,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_09_12_192918) do
     t.string "colorant"
     t.string "butter"
     t.string "title"
+    t.integer "base_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
