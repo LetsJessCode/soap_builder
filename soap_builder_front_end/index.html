@@ -7,19 +7,54 @@
       <h3><title>Soap Builder</title></h3>  
       <p>Welcome to the amazing world of Soap! Select your soap base, and create something amazing!!</p>
     </div>
-   <form id="base-form">Select a Soap Base!
-       <div>
-           <label for="base-name">Base Selection:</label>
-           <input type="text" name="base-name" id="base-name"> <br><br>
-           <label for="base-description">All about the Base...</label><br>
-           <textarea name="text" id="description" cols="30" rows="10"></textarea>
-       </div>
-   </form>
+   <hr>
 </head>
 <body>
+    <form id="base-form">Lets Make Soap!
+        <h3>Select a Soap Base!</h3>
+        <div>
+            <label for="base-name">Base Selection:</label>
+            <select type="text" name="base-name" id="base-name"></select> <br><br>
+            <label for="base-description">All about the Base...</label><br>
+            <textarea name="text" id="description" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+             <h3>Select a Butter</h3>
+             <label for="soap-butter">Butter Me Up!</label>
+             <select name="soap-butter" id="soap-butter"></select>
+        </div>
+        <div>
+            <h3>Select Your Oils.</h3>
+            <label for="soap-essential">Essential Oils</label>
+            <select name="soap-essential" id="soap-essential"></select>
+            <label for="soap-fragrance">Fragrance Oils</label>
+            <select name="soap-fragrance" id="soap-fragrance"></select>
+        </div>
+        <div>
+            <h3>Select an Exfoliant</h3>
+            <label for="soap-exfoliant">Exfoliants</label>
+            <select name="soap-exfoliant" id="soap-exfoliant"></select>
+        </div>
+        <div>
+         <h3>Choose your Soap Color</h3>
+             <label for="soap-colorant">Colorants</label>
+             <select name="soap-colorant" id="soap-colorant"></select>
+     </div>
+     <div>
+         <h3>Name That Soap!</h3>
+             <label for="soap-title">Soap Name: </label>
+            <input type="text" name="soap-title", id="soap-title">
+     </div>
+     <div>
+         <input type="submit" value="Create Soap">
+     </div>
+    </form>
+<hr>
+    <h2> Your Soaps! </h2>
+    <hr>
+    <div id="soap-list"></div>
     <div>
-        
+
     </div>
-    
 </body>
 </html>
